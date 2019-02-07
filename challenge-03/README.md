@@ -179,25 +179,19 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 pessoa.apresentacao = function(){
-    let sexo;
-    let idade;
-    let metro;
+    let sexo = "eu sou o";
+    let idade = "anos ";
+    let metro = "metros!";
         
     if(pessoa.sexo === 'Feminino'){
       sexo = "eu sou a";
-    }else { 
-      sexo = "eu sou o";
     }
 
-    if(pessoa.idade > 1){
-      idade = "anos ";
-    }else {
+    if(pessoa.idade === 1){
       idade = "ano ";
     }
-
-    if(pessoa.caminhouQuantosMetros > 1){
-      metro = "metros!";
-    } else {
+    
+    if(pessoa.caminhouQuantosMetros === 1){
       metro = "metro!";
     }
         
