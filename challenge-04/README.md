@@ -47,45 +47,45 @@ let carro = {
     quantasProtas: 4,
     assentos: 5,
     quantidadePessoas: 0
-}
+};
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-function mudarCor(cor){
+carro.mudarCor = function(cor){
     carro.cor = cor;
-}
+};
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-function obterCor(){
+carro. obterCor = function(){
     return carro.cor;
-}
+};
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-function obterModelo(){
+carro.obterModelo = function(){
     return carro.modelo;
-}
+};
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-function obterMarca(){
+carro.obterMarca = function(){
     return carro.marca;
-}
+};
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-function obterMarcaModelo(){
-    return "Esse carro é um " + obterMarca() + " " + obterModelo(); 
-}
+carro.obterMarcaModelo = function(){
+    return "Esse carro é um " + carro.obterMarca() + " " + carro.obterModelo(); 
+};
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -103,7 +103,7 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-function adicionarPessoas(entrar){  
+carro.adicionarPessoas = function(entrar){  
   let vagas = (carro.assentos - carro.quantidadePessoas);
   let indicativo = (vagas > 1) ? 'pessoas' : 'pessoa';
   
