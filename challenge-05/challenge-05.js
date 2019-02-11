@@ -88,18 +88,21 @@ Ainda com a função acima, imprima a quantidade de páginas de um livro qualque
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-console.log('O livro Introdução ao HTML5 tem ' + book('Introdução ao HTML5').quantidadePaginas + ' páginas!');
+let name = 'Introdução ao HTML5';
+console.log('O livro ' + name ' tem ' + book(name).quantidadePaginas + ' páginas!');
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-console.log('O autor do livro Smashing CSS é ' + book('Smashing CSS').autor + '.');
+let name = 'Introdução ao HTML5';
+console.log('O autor do ' + name + ' é ' + book(name).autor + '.');
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-console.log('O livro Segredos do Ninja Javascript foi publicado pela editora ' + book('Segredos do Ninja Javascript').editora + '.');
+let name = 'Introdução ao HTML5';
+console.log('O livro '+  name + ' foi publicado pela editora ' + book(name).editora + '.');
