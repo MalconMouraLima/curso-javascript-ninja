@@ -103,24 +103,24 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-carro.adicionarPessoas = function(entrar){  
-  let vagas = (carro.assentos - carro.quantidadePessoas);
-  let indicativo = (vagas > 1) ? 'pessoas' : 'pessoa';
-  
-  if(entrar <= carro.assentos){
-      if(entrar <= vagas){
-        carro.quantidadePessoas += entrar;
-        return "Já temos " + carro.quantidadePessoas + " pessoas no carro!";
-      } else if (vagas > 0) {
-          return "Só cabem mais " + vagas + " " + indicativo;    
-      } else {
-        return "O carro já está lotado!";
-        
-      }
-  } else {
-    return "O carro tem apenas " + carro.assentos + " assentos!";
+carro.adicionarPessoas = function(numeroPessoas){  
+  let totalPessoas = carro.quantidadePessoas + numeroPessoas;
+
+  if(carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos){
+    return "O carro já está lotado!";
   }
-}
+
+  if(totalPessoas > carro.assentos){
+    let quantasPessoasCabem = carro.assentos - carro.quantidadePessoas;
+    let plucarlOuSingular = quantasPessoasCabem === 1 ? 'pessoa' : 'pessoas';
+    return 'Só cabem mais ' + quantasPessoasCabem + ' ' + plucarlOuSingular + '!';  
+  }
+
+  carro.quantidadePessoas +=numeroPessoas;
+  return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+  
+};
+
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -157,11 +157,11 @@ carro.adicionarPessoas(4); // "Só cabem mais 3 pessoas"
 carro.adicionarPessoas(3); // "Já temos 5 pessoas no carro!"
 
 // Tire 4 pessoas do carro.
-carro.quantidadePessoas -= 4;
+carro.adicionarPessoas(-4); // "Já temos 1 pessoas no carro!"
 
 // Adicione 10 pessoas no carro.
-carro.adicionarPessoas(10); // "O carro tem apenas 5 assentos!"
+carro.adicionarPessoas(10); // "Só cabem mais 4 pessoas!"
 
 // Quantas pessoas temos no carro?
-carro.quantidadePessoas;
+carro.quantidadePessoas; / 1
 ```
