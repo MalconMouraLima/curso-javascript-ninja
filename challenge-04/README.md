@@ -130,37 +130,37 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-obterCor(); // "Azul"
+carro.obterCor(); // "Azul"
 
 // Mude a cor do carro para vermelho.
-mudarCor('vermelho');
+carro.mudarCor('vermelho');
 
 // E agora, qual a cor do carro?
-obterCor(); // "vermelho"
+carro.obterCor(); // "vermelho"
 
 // Mude a cor do carro para verde musgo.
-mudarCor('verde musgo');
+carro.mudarCor('verde musgo');
 
 // E agora, qual a cor do carro?
-obterCor(); // "verde musgo"
+carro.obterCor(); // "verde musgo"
 
 // Qual a marca e modelo do carro?
-obterMarcaModelo(); // "Esse carro é um Peugeout Passion 207 XR"
+carro.obterMarcaModelo(); // "Esse carro é um Peugeout Passion 207 XR"
 
 // Adicione 2 pessoas no carro.
-adicionarPessoas(2); // "Já temos 2 pessoas no carro!"
+carro.adicionarPessoas(2); // "Já temos 2 pessoas no carro!"
 
 // Adicione mais 4 pessoas no carro.
-adicionarPessoas(4); // "Só cabem mais 3 pessoas"
+carro.adicionarPessoas(4); // "Só cabem mais 3 pessoas"
 
 // Faça o carro encher.
-adicionarPessoas(3); // "Já temos 5 pessoas no carro!"
+carro.adicionarPessoas(3); // "Já temos 5 pessoas no carro!"
 
 // Tire 4 pessoas do carro.
 carro.quantidadePessoas -= 4;
 
 // Adicione 10 pessoas no carro.
-adicionarPessoas(10); // "O carro tem apenas 5 assentos!"
+carro.adicionarPessoas(10); // "O carro tem apenas 5 assentos!"
 
 // Quantas pessoas temos no carro?
 carro.quantidadePessoas;
